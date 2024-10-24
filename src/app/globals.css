@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #f5f5f5;
+    --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #f5f5f5;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+input:focus {
+    outline: none;
+} /* outline 테두리 없애기 */
+
+header {
+    width: 100vw;
+    max-width: 100%;
+    /* height: 40px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header > div {
+    margin-top: 10px;
+    width: 455px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+header > div > input {
+    width: 400px;
+    height: 30px;
+    margin-left: 10px;
+    color: #000000;
+    font-size: 12px;
+}
+header > div > button {
+    margin-left: 10px;
+    color: #9b9b9b;
+    font-size: 12px;
+}
+header > p {
+    font-size: 10px;
+}
+.content_main {
+    width: 100vw;
+    max-width: 100%;
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    grid-auto-rows: minmax(100px, auto);
+    grid-row: 10px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.item > h1,
+.item > h6 {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.item > h1 {
+    font-size: 12px;
+    color: #000000;
+}
+
+.item > h6 {
+    font-size: 10px;
+    color: #72727284;
+}
