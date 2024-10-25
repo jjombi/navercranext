@@ -249,6 +249,6 @@ export async function GET(request) {
         });
     } catch (error) {
         console.error('Crawling error:', error);
-        return Response.json({ error: 'An error occurred while crawling' }, { status: 500 });
+        return Response.json({ error: 'An error occurred while crawling', message: error.message }, { status: 500 });
     }
 }
