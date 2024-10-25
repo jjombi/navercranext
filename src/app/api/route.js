@@ -165,7 +165,7 @@ const crawlingFunc = async (url, ty) => {
         return content2;
     } catch (error) {
         console.error('크롤링 중 오류 발생:', error);
-        return (error);
+        return error;
     } finally {
         await page.close();
     }
@@ -214,7 +214,7 @@ export async function GET(request) {
 
     try {
         let ty = 1;
-        let data1 = [];
+        let data1 = [];//https://github.com/jjombi/navercranext.git
         // const data2 = [];
         // const data3 = [];
         while (typeof ty === 'number') {
@@ -223,6 +223,8 @@ export async function GET(request) {
                 1
             );
             if (data === false) {
+                ty === false;
+            } else if (ty >= 50) {
                 ty === false;
             } else {
                 data1.push(...data);
