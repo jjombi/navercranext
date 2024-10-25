@@ -223,9 +223,9 @@ export async function GET(request) {
                 1
             );
             if (data === false) {
-                ty === false;
+                ty = false;
             } else if (ty >= 50) {
-                ty === false;
+                ty = false;
             } else {
                 data1.push(...data);
                 ty += 1;
