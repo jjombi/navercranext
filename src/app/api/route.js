@@ -1,4 +1,5 @@
-import puppeteer from 'puppeteer';
+// import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core'; // puppeteer 대신 puppeteer-core 사용
 import chromium from 'chrome-aws-lambda';
 
 import axios from 'axios';
@@ -15,8 +16,10 @@ const initBrowser = async () => {
         // });
         browser = await puppeteer.launch({
             args: chromium.args,
+            defaultViewport: chromium.defaultViewport,
             executablePath: await chromium.executablePath,
             headless: true,
+            ignoreHTTPSErrors: true,
         });
     }
     return browser;
