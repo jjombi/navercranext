@@ -1,7 +1,7 @@
 // import puppeteer from 'puppeteer';
 import puppeteer from 'puppeteer-core'; // puppeteer 대신 puppeteer-core 사용
-import chromium from 'chrome-aws-lambda';
-
+// import chromium from 'chrome-aws-lambda';
+import chromium from '@sparticuz/chromium';
 import axios from 'axios';
 let browser;
 //------------------------------------------------------------------------------------------------------
