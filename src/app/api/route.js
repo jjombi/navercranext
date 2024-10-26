@@ -11,7 +11,7 @@ const initBrowser = async () => {
         //     args: ['--no-sandbox', '--disable-setuid-sandbox'],
         // });
         browser = await puppeteer.launch({
-            executablePath: '/opt/buildhome/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome',
+            executablePath: `${process.cwd()}/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome`,
         });
         // browser = await puppeteer.launch({
         //     args: chromium.args,
