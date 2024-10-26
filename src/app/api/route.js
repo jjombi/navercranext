@@ -14,11 +14,18 @@ const initBrowser = async () => {
         // browser = await puppeteer.launch({
         //     executablePath: `${process.cwd()}/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome`,
         // });
+        // browser = await puppeteer.launch({
+        //     args: chromium.args,
+        //     defaultViewport: chromium.defaultViewport,
+        //     executablePath: await chromium.executablePath,
+        //     headless: true,
+        //     ignoreHTTPSErrors: true,
+        // });
         browser = await puppeteer.launch({
             args: chromium.args,
             defaultViewport: chromium.defaultViewport,
-            executablePath: await chromium.executablePath,
-            headless: true,
+            executablePath: await chromium.executablePath(),
+            headless: chromium.headless,
             ignoreHTTPSErrors: true,
         });
     }

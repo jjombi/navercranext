@@ -10,6 +10,7 @@
         "test": "jest"
     },
     "dependencies": {
+        "@sparticuz/chromium": "^109.0.6",
         "axios": "^1.7.7",
         "browser": "^0.2.6",
         "cheerio": "^1.0.0",
@@ -18,12 +19,12 @@
         "install": "^0.13.0",
         "next": "14.2.13",
         "puppeteer": "^23.6.0",
+        "puppeteer-core": "^10.4.0",
         "react": "^18",
         "react-csv": "^2.2.2",
         "react-dom": "^18",
         "save": "^2.9.0",
-        "swr": "^2.2.5",
-        "puppeteer-core": "^10.1.0"
+        "swr": "^2.2.5"
     },
     "devDependencies": {
         "@testing-library/dom": "^10.4.0",

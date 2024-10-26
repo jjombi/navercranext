@@ -1,12 +1,9 @@
 [build]
-  command = "chmod +x ./build.sh && ./build.sh"
+  command = "npm run build"
   publish = ".next"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-[[plugins]]
-  package = "netlify-plugin-chromium"
 
 [build.environment]
   PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
