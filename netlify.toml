@@ -11,3 +11,5 @@
 # 필요한 Chrome 의존성 패키지들을 설치하는 명령어 추가
 [[plugins]]
   package = "netlify-plugin-chromium"
+[build.environment]
+  PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
