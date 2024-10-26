@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import chromium from 'chrome-aws-lambda';
+// import chromium from 'chrome-aws-lambda';
 
 import axios from 'axios';
 let browser;

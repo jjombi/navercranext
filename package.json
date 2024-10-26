@@ -13,7 +13,6 @@
     "axios": "^1.7.7",
     "browser": "^0.2.6",
     "cheerio": "^1.0.0",
-    "chrome-aws-lambda": "^10.1.0",
     "fs": "^0.0.1-security",
     "install": "^0.13.0",
     "next": "14.2.13",
