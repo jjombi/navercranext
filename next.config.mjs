@@ -17,6 +17,14 @@ const nextConfig = {
             },
         ],
     },
+    webpack: (config, { isServer }) => {
+        // Puppeteer와 관련된 모듈들을 webpack이 무시하도록 설정
+        if (isServer) {
+            config.externals.push('puppeteer', 'chrome-aws-lambda');
+        }
+
+        return config;
+    },
 };
 
 export default nextConfig;
