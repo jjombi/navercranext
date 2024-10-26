@@ -6,9 +6,12 @@ let browser;
 //------------------------------------------------------------------------------------------------------
 const initBrowser = async () => {
     if (!browser) {
-        browser = await puppeteer.launch({
-            headless: true,
-            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        // browser = await puppeteer.launch({
+        //     headless: true,
+        //     args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        // });
+        const browser = await puppeteer.launch({
+            executablePath: '/opt/buildhome/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome',
         });
     }
     return browser;
@@ -214,7 +217,7 @@ export async function GET(request) {
 
     try {
         let ty = 1;
-        let data1 = [];//https://github.com/jjombi/navercranext.git
+        let data1 = []; //https://github.com/jjombi/navercranext.git
         // const data2 = [];
         // const data3 = [];
         while (typeof ty === 'number') {
