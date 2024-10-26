@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-// import chromium from 'chrome-aws-lambda';
+import chromium from 'chrome-aws-lambda';
 
 import axios from 'axios';
 let browser;
@@ -10,14 +10,14 @@ const initBrowser = async () => {
         //     headless: true,
         //     args: ['--no-sandbox', '--disable-setuid-sandbox'],
         // });
-        browser = await puppeteer.launch({
-            executablePath: `${process.cwd()}/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome`,
-        });
         // browser = await puppeteer.launch({
-        //     args: chromium.args,
-        //     executablePath: await chromium.executablePath,
-        //     headless: true,
+        //     executablePath: `${process.cwd()}/.cache/puppeteer/chrome/linux-119.0.6045.105/chrome-linux64/chrome`,
         // });
+        browser = await puppeteer.launch({
+            args: chromium.args,
+            executablePath: await chromium.executablePath,
+            headless: true,
+        });
     }
     return browser;
 };
